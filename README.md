@@ -1,0 +1,168 @@
+# DRYRUN – Red Team Attack Simulator
+
+**DRYRUN** is an interactive, CTF-style red team attack simulation framework designed for learning, practice, and demonstration of adversary tradecraft across endpoint, Active Directory, and cloud environments — without executing real attacks.
+
+It focuses on attack-chain logic, detection mapping, and defensive understanding, **not exploitation**.
+
+---
+
+## Key Features
+
+- Interactive menu-driven attack chain selection  
+- CTF-style simulation (no real payloads)  
+- MITRE ATT&CK–aligned techniques  
+- Attack chain coverage: Initial → Lateral → Exfiltration → AD → Cloud  
+- MITRE Navigator layer export  
+- NIST-style risk scoring  
+- Windows Event ID mapping for blue-team visibility  
+- Persistent execution (tool does not exit after one run)  
+- Clean red-team themed DRYRUN banner  
+
+---
+
+## Attack Chain Coverage
+
+### 1. Initial Access
+- MITRE Techniques: T1059, T1566, T1204  
+- Example Windows Events: 4688, 4624  
+- OPSEC-aware scoring  
+
+### 2. Lateral Movement
+- MITRE Techniques: T1021, T1080  
+- Example Windows Events: 4624, 4672  
+
+### 3. Exfiltration
+- MITRE Techniques: T1041, T1567  
+- Example Windows Events: 5156, 4663  
+
+### 4. Active Directory Attack Path
+- Kerberoasting, DCSync, Golden Ticket logic  
+- Windows Events: 4769, 4662, 4673  
+
+### 5. Cloud Attack Path
+- IAM privilege escalation, token abuse, storage exfiltration  
+- Cloud audit log mapping  
+
+---
+
+## Project Structure
+
+dryrun/
+├── dryrun.py # Main interactive launcher
+├── core/
+│ ├── initial_access.py
+│ ├── lateral.py
+│ ├── exfil.py
+│ ├── ad_attack.py
+│ └── cloud_attack.py
+├── mitre/
+│ └── navigator.py # MITRE Navigator export
+├── scoring/
+│ └── nist.py # Risk scoring engine
+├── output/
+│ ├── report.txt
+│ └── navigator_layer.json
+├── README.md
+└── .gitignore
+
+yaml
+Copy code
+
+---
+
+## Installation
+
+### Requirements
+- Python 3.8+  
+- Linux / macOS / Windows (tested on Linux)
+
+### Clone Repository
+```bash
+git clone https://github.com/<your-username>/dryrun-redteam-simulator.git
+cd dryrun-redteam-simulator
+How to Run
+bash
+Copy code
+python3 dryrun.py
+You will see the DRYRUN banner and menu.
+
+Interactive Menu
+markdown
+Copy code
+Select Attack Chain:
+
+1. Initial Access
+2. Lateral Movement
+3. Exfiltration
+4. Active Directory Attack Path
+5. Cloud Attack Path
+0. Exit
+Select any option to simulate that attack chain
+
+After execution, the tool returns to the menu
+
+Use 0 to exit cleanly
+
+Example Output
+less
+Copy code
+[+] Executing: Initial Access
+[+] T1059 | Risk: 0.8 | OPSEC: LOW – Stealthy
+
+[✓] Simulation Complete
+[✓] Report saved → output/report.txt
+[✓] MITRE Navigator → output/navigator_layer.json
+Generated Artifacts
+Report
+Location: output/report.txt
+
+Includes: Attack chain summary, MITRE techniques, risk score, Windows Event IDs, detection notes
+
+MITRE Navigator
+File: output/navigator_layer.json
+
+Import directly into: MITRE Navigator
+
+Intended Use
+Red team learning & practice
+
+Blue team detection training
+
+SOC analyst education
+
+CTF-style labs
+
+Demonstrations & seminars
+
+Interview preparation (attack-chain reasoning)
+
+Safety & Ethics
+No real attacks
+
+No exploitation
+
+No persistence
+
+No payload delivery
+
+This tool simulates logic only. Use responsibly.
+
+Roadmap (Planned)
+Persistent scoring system
+
+Blue-team detection simulator
+
+YAML-based attack plans
+
+ATT&CK heatmap scoring
+
+CI testing
+
+CALDERA-style extensions
+
+License
+MIT License
+
+Author
+Ramesh Kannan
+Red Team | Networking | Security Research
