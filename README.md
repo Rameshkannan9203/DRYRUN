@@ -73,24 +73,23 @@ The project emphasizes **attack-chain logic, detection mapping, and defensive un
 
 ## Project Structure
 
-dryrun/
-├── dryrun.py # Main interactive launcher
-├── core/
-│ ├── initial_access.py
-│ ├── lateral.py
-│ ├── exfil.py
-│ ├── ad_attack.py
-│ └── cloud_attack.py
-├── mitre/
-│ └── navigator.py # MITRE Navigator export
-├── scoring/
-│ └── nist.py # Risk scoring engine
-├── output/
-│ ├── report.txt
-│ └── navigator_layer.json
-├── README.md
-└── .gitignore
-
+📦 dryrun/
+├── 📄 dryrun.py # Main interactive launcher
+├── 📁 core/
+│ ├── 📄 initial_access.py
+│ ├── 📄 lateral.py
+│ ├── 📄 exfil.py
+│ ├── 📄 ad_attack.py
+│ └── 📄 cloud_attack.py
+├── 📁 mitre/
+│ └── 📄 navigator.py # MITRE Navigator export
+├── 📁 scoring/
+│ └── 📄 nist.py # Risk scoring engine
+├── 📁 output/
+│ ├── 📄 report.txt
+│ └── 📄 navigator_layer.json
+├── 📄 README.md
+└── ⚙️ .gitignore
 
 
 ---
