@@ -1,0 +1,35 @@
+{
+  "rubeus.exe": {
+    "rule": "Kerberos Abuse Detection",
+    "effectiveness": 0.75
+  },
+  "lsass.exe": {
+    "rule": "Credential Dumping Alert",
+    "effectiveness": 0.9
+  },
+  "sekurlsa.dll": {
+    "rule": "Pass-the-Hash Detection",
+    "effectiveness": 0.8
+  },
+  "gpmc.msc": {
+    "rule": "Suspicious GPO Modification",
+    "effectiveness": 0.6
+  },
+
+  "cloud-cli": {
+    "rule": "Cloud CLI Abuse",
+    "effectiveness": 0.7
+  },
+  "iam-cli": {
+    "rule": "IAM Privilege Escalation",
+    "effectiveness": 0.8
+  },
+  "metadata-api": {
+    "rule": "IMDS Token Theft",
+    "effectiveness": 0.6
+  },
+  "cloud-storage-cli": {
+    "rule": "Suspicious Cloud Exfiltration",
+    "effectiveness": 0.65
+  }
+}

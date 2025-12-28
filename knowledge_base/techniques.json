@@ -1,0 +1,59 @@
+{
+  "T1059": {
+    "name": "Command and Scripting Interpreter",
+    "binary": "powershell.exe",
+    "impact": 8
+  },
+  "T1047": {
+    "name": "Windows Management Instrumentation",
+    "binary": "wmic.exe",
+    "impact": 7
+  },
+  "T1041": {
+    "name": "Exfiltration Over C2 Channel",
+    "binary": "curl.exe",
+    "impact": 9
+  },
+
+  "T1558": {
+    "name": "Kerberos Ticket Abuse (Kerberoasting)",
+    "binary": "rubeus.exe",
+    "impact": 9
+  },
+  "T1003": {
+    "name": "Credential Dumping",
+    "binary": "lsass.exe",
+    "impact": 10
+  },
+  "T1550": {
+    "name": "Pass the Hash",
+    "binary": "sekurlsa.dll",
+    "impact": 9
+  },
+  "T1484": {
+    "name": "Domain Policy Modification",
+    "binary": "gpmc.msc",
+    "impact": 8
+  },
+
+  "T1078": {
+    "name": "Valid Cloud Accounts",
+    "binary": "cloud-cli",
+    "impact": 7
+  },
+  "T1098": {
+    "name": "Cloud Account Manipulation",
+    "binary": "iam-cli",
+    "impact": 8
+  },
+  "T1528": {
+    "name": "Steal Application Access Token",
+    "binary": "metadata-api",
+    "impact": 9
+  },
+  "T1567": {
+    "name": "Exfiltration to Cloud Storage",
+    "binary": "cloud-storage-cli",
+    "impact": 8
+  }
+}

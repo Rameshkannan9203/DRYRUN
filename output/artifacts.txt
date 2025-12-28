@@ -1,0 +1,6 @@
+- Email attachment: invoice_2025.docm (simulated)
+- Process Tree: WINWORD.EXE -> powershell.exe
+- Registry Key: HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+- Target Process: lsass.exe (simulation only)
+- Beacon Interval: 60 seconds (simulated)
+- Event Logs: Partial deletion attempt (simulated)

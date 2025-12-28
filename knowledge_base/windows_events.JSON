@@ -1,0 +1,11 @@
+{
+  "rubeus.exe": ["4769", "4624"],
+  "lsass.exe": ["4688", "10"],
+  "sekurlsa.dll": ["4688", "4625"],
+  "gpmc.msc": ["5136"],
+
+  "cloud-cli": ["AzureActivity", "AWSCloudTrail"],
+  "iam-cli": ["AzureADLogs", "IAMChange"],
+  "metadata-api": ["IMDSAccess"],
+  "cloud-storage-cli": ["ObjectAccess"]
+}
