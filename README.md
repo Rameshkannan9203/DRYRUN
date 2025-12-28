@@ -71,8 +71,9 @@ The project emphasizes **attack-chain logic, detection mapping, and defensive un
 
 ---
 
-# 📁 Project Structure
+### 📁 Project Structure
 
+```text
 📦 dryrun/
 ├── 📄 dryrun.py # Main interactive launcher
 ├── 📁 core/
@@ -92,7 +93,7 @@ The project emphasizes **attack-chain logic, detection mapping, and defensive un
 └── ⚙️ .gitignore
 
 
-
+```
 
 ---
 
