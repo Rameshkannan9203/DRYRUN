@@ -1,6 +1,0 @@
-- Email gateway may miss macro-based payload if obfuscated.
-- LOLBins usage may bypass signature-based AV detection.
-- Registry-based persistence often lacks command-line logging.
-- Memory access events require EDR-level visibility.
-- Encrypted outbound traffic may blend with normal HTTPS traffic.
-- Some artifacts persist in memory and EDR telemetry.
