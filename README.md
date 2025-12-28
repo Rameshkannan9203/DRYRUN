@@ -1,47 +1,73 @@
 # DRYRUN – Red Team Attack Simulator
 
-**DRYRUN** is an interactive, CTF-style red team attack simulation framework designed for learning, practice, and demonstration of adversary tradecraft across endpoint, Active Directory, and cloud environments — without executing real attacks.
+**DRYRUN** is an interactive, CTF-style **red team attack simulation framework** designed for learning, practice, and demonstration of **adversary tradecraft** across **endpoint, Active Directory, and cloud environments** — **without executing real attacks**.
 
-It focuses on attack-chain logic, detection mapping, and defensive understanding, **not exploitation**.
+The project emphasizes **attack-chain logic, detection mapping, and defensive understanding**, rather than exploitation or payload delivery.
+
+---
+
+## Key Objectives
+
+- Simulate real-world red team attack paths safely
+- Map offensive actions to **MITRE ATT&CK**
+- Improve **blue team detection visibility**
+- Support **CTF labs, SOC training, interviews, and demos**
 
 ---
 
 ## Key Features
 
-- Interactive menu-driven attack chain selection  
-- CTF-style simulation (no real payloads)  
-- MITRE ATT&CK–aligned techniques  
-- Attack chain coverage: Initial → Lateral → Exfiltration → AD → Cloud  
-- MITRE Navigator layer export  
-- NIST-style risk scoring  
-- Windows Event ID mapping for blue-team visibility  
-- Persistent execution (tool does not exit after one run)  
-- Clean red-team themed DRYRUN banner  
+- Interactive, menu-driven attack chain selection
+- CTF-style simulations (logic-only, no payloads)
+- MITRE ATT&CK–aligned techniques
+- Full attack-chain coverage:
+  - Initial Access
+  - Lateral Movement
+  - Exfiltration
+  - Active Directory
+  - Cloud
+- MITRE Navigator layer export
+- NIST-style risk scoring
+- Windows Event ID mapping for detection context
+- Persistent execution (tool does not exit after one run)
+- Clean red-team themed **DRYRUN** banner
 
 ---
 
 ## Attack Chain Coverage
 
 ### 1. Initial Access
-- MITRE Techniques: T1059, T1566, T1204  
-- Example Windows Events: 4688, 4624  
-- OPSEC-aware scoring  
+- **MITRE Techniques:** `T1059`, `T1566`, `T1204`
+- **Example Windows Events:** `4688`, `4624`
+- OPSEC-aware risk scoring
+
+---
 
 ### 2. Lateral Movement
-- MITRE Techniques: T1021, T1080  
-- Example Windows Events: 4624, 4672  
+- **MITRE Techniques:** `T1021`, `T1080`
+- **Example Windows Events:** `4624`, `4672`
+
+---
 
 ### 3. Exfiltration
-- MITRE Techniques: T1041, T1567  
-- Example Windows Events: 5156, 4663  
+- **MITRE Techniques:** `T1041`, `T1567`
+- **Example Windows Events:** `5156`, `4663`
+
+---
 
 ### 4. Active Directory Attack Path
-- Kerberoasting, DCSync, Golden Ticket logic  
-- Windows Events: 4769, 4662, 4673  
+- Kerberoasting
+- DCSync
+- Golden Ticket logic
+- **Windows Events:** `4769`, `4662`, `4673`
+
+---
 
 ### 5. Cloud Attack Path
-- IAM privilege escalation, token abuse, storage exfiltration  
-- Cloud audit log mapping  
+- IAM privilege escalation
+- Token abuse
+- Storage exfiltration
+- Cloud audit log mapping
 
 ---
 
@@ -65,30 +91,29 @@ dryrun/
 ├── README.md
 └── .gitignore
 
-yaml
-Copy code
+
 
 ---
 
 ## Installation
 
 ### Requirements
-- Python 3.8+  
-- Linux / macOS / Windows (tested on Linux)
+- Python **3.8+**
+- Linux / macOS / Windows  
+  *(Tested on Linux)*
 
-### Clone Repository
+### Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/dryrun-redteam-simulator.git
-cd dryrun-redteam-simulator
-How to Run
-bash
-Copy code
+git clone https://github.com/<your-username>/DRYRUN.git
+cd DRYRUN
+```
+### How to run
+```bash
 python3 dryrun.py
-You will see the DRYRUN banner and menu.
+```
+You will see the DRYRUN banner followed by an interactive menu.
 
-Interactive Menu
-markdown
-Copy code
+### Interactive Menu
 Select Attack Chain:
 
 1. Initial Access
@@ -97,73 +122,92 @@ Select Attack Chain:
 4. Active Directory Attack Path
 5. Cloud Attack Path
 0. Exit
-Select any option to simulate that attack chain
+   
+- Select any option to simulate that attack chain
 
-After execution, the tool returns to the menu
+- After execution, the tool returns to the menu
 
-Use 0 to exit cleanly
+- Use 0 to exit cleanly
 
-Example Output
-less
-Copy code
-[+] Executing: Initial Access
+  ### Example Output
+
+  [+] Executing: Initial Access
 [+] T1059 | Risk: 0.8 | OPSEC: LOW – Stealthy
 
 [✓] Simulation Complete
 [✓] Report saved → output/report.txt
 [✓] MITRE Navigator → output/navigator_layer.json
-Generated Artifacts
-Report
-Location: output/report.txt
 
-Includes: Attack chain summary, MITRE techniques, risk score, Windows Event IDs, detection notes
+### Generated Artifacts
+## Report
 
-MITRE Navigator
-File: output/navigator_layer.json
+**Location:** output/report.txt
 
-Import directly into: MITRE Navigator
+Includes:
 
-Intended Use
-Red team learning & practice
+- Attack chain summary
 
-Blue team detection training
+- MITRE techniques
 
-SOC analyst education
+- Risk score
 
-CTF-style labs
+- Windows Event IDs
 
-Demonstrations & seminars
+- Detection notes
 
-Interview preparation (attack-chain reasoning)
+### MITRE Navigator
 
-Safety & Ethics
-No real attacks
+**File:** output/navigator_layer.json
 
-No exploitation
+Import directly into **MITRE ATT&CK Navigator**
 
-No persistence
+### Intended Use
 
-No payload delivery
+- Red team learning and practice
 
-This tool simulates logic only. Use responsibly.
+- Blue team detection training
 
-Roadmap (Planned)
-Persistent scoring system
+- SOC analyst education
 
-Blue-team detection simulator
+- CTF-style labs
 
-YAML-based attack plans
+- Demonstrations and seminars
 
-ATT&CK heatmap scoring
+- Interview preparation (attack-chain reasoning)
 
-CI testing
+### Safety & Ethics
 
-CALDERA-style extensions
+- No real attacks
 
-License
+- No exploitation
+
+- No persistence mechanisms
+
+- No payload delivery
+
+**DRYRUN simulates logic only. Use responsibly.**
+
+### Roadmap (Planned)
+
+- Persistent scoring system
+
+- Blue-team detection simulator
+
+- YAML-based attack plans
+
+- ATT&CK heatmap scoring
+
+- CI testing
+
+- CALDERA-style extensions
+
+### License
+
 MIT License
 
-Author
-Ramesh Kannan
+### Author
+
+**RameshKannan**
 Red Team | Networking | Security Research
+  
 ---
